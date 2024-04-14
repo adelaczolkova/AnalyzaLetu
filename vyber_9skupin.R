@@ -414,6 +414,5 @@ for(i in 1:9){
        main = gch_sel[i], pch = 20,
        panel.first = abline(h = 0, col = "lightgrey"))
   lines(y, comp1_y[[i]])
-
 }
 
