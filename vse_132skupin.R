@@ -60,7 +60,7 @@ rm(list = c("airport","airports_abbr","dist","distance_category","gr_var","month
 
 
 # Vsechna zpozdeni -------------------------------------------------------------
-# cairo_pdf(file = "./obrazky/1_vsechna_zpozdeni.pdf", height = 99, width = 14)
+# cairo_pdf(file = "./obrazky/01_vsechna_zpozdeni.pdf", height = 99, width = 14)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   ddata = data[data$group == i, ]
@@ -76,7 +76,7 @@ dset = na.omit(data[data$arr_delay <= 300 & data$arr_delay >= 5 &
 dset$ad_log = log(dset$arr_delay, base = 5)
 dset$dd_log = log(dset$dep_delay, base = 5)
 
-# cairo_pdf(file="./obrazky/2_zpozdeni_5-300_min.pdf", height = 99, width = 14)  
+# cairo_pdf(file="./obrazky/02_zpozdeni_5-300_min.pdf", height = 99, width = 14)  
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   ddata = dset[dset$group == i,]
@@ -112,7 +112,7 @@ for(i in 1:40){
   yy = c(yy,rep(y[i],40))
 }
 
-# cairo_pdf(file = "./obrazky/3_odhady_hustot.pdf", height = 99, width = 14)
+# cairo_pdf(file = "./obrazky/03_odhady_hustot.pdf", height = 99, width = 14)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   scatter3D(xx, yy, as.vector(dens[[i]]$fhat),
@@ -147,7 +147,7 @@ for (i in gr){
 }
 rm(list = c("d","i","j","k","m","sorted"))
 
-# cairo_pdf(file = "./obrazky/4_clr_hustoty.pdf", height = 99, width = 14)
+# cairo_pdf(file = "./obrazky/04_clr_hustoty.pdf", height = 99, width = 14)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   scatter3D(xx, yy, as.vector(clr_dens[[i]]),
@@ -237,7 +237,7 @@ for(i in gr){
 rm(list = c("i","j","v","dx","dy","h"))
 
 # zobrazeni 
-# cairo_pdf("./obrazky/5_marginalni_odlet.pdf", height = 3*132, width = 12)
+# cairo_pdf("./obrazky/05_marginalni_odlet.pdf", height = 3*132, width = 12)
 # par(mfrow = c(132,4))
 # for(i in gr){
 #   plot(x,x_am[[i]], xlab = "log(zpoždění při odletu)", ylab = "aritmetická marg. h.",
@@ -251,7 +251,7 @@ rm(list = c("i","j","v","dx","dy","h"))
 # }
 # dev.off()
 
-# cairo_pdf("./obrazky/6_marginalni_prilet.pdf", height = 3*132, width = 12)
+# cairo_pdf("./obrazky/06_marginalni_prilet.pdf", height = 3*132, width = 12)
 # par(mfrow = c(132,4))
 # for(i in gr){
 #   plot(y,y_am[[i]], xlab = "log(zpoždění při příletu)", ylab = "aritmetická marg. h.",
@@ -268,7 +268,7 @@ rm(list = c("i","j","v","dx","dy","h"))
 
 # Zobrazeni rozlozenych hustot -------------------------------------------------
 
-# cairo_pdf(file = "./obrazky/7_nezavisle_casti.pdf", height = 99, width = 14)
+# cairo_pdf(file = "./obrazky/07_nezavisle_casti.pdf", height = 99, width = 14)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   scatter3D(xx, yy, as.vector(clr_ind[[i]]),
@@ -278,7 +278,7 @@ rm(list = c("i","j","v","dx","dy","h"))
 # }
 # dev.off()
 
-# cairo_pdf(file = "./obrazky/8_interakcni_casti.pdf", height = 99, width = 14)
+# cairo_pdf(file = "./obrazky/08_interakcni_casti.pdf", height = 99, width = 14)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   scatter3D(xx, yy, as.vector(clr_int[[i]]),
@@ -288,7 +288,7 @@ rm(list = c("i","j","v","dx","dy","h"))
 # }
 # dev.off()
 
-# cairo_pdf(file = "./obrazky/9_singularni_hodnoty.pdf", height = 99, width = 12)
+# cairo_pdf(file = "./obrazky/09_singularni_hodnoty.pdf", height = 99, width = 12)
 # par(mfrow = c(33,4))
 # for(i in gr){
 #   plot(1:10, sing_vals[[i]], xlab = "komponenta", ylab = "singulární hodnota",
