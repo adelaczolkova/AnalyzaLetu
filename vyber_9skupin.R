@@ -248,7 +248,7 @@ for(n in 1:9){
   
   sing_vals[[n]] = fcint_dec$d[1:10]
   
-  ## prvni komponenty
+  # prvni komponenty
   comp1_x[[n]] = u1 = fcint_dec$u[,1]
   comp1_y[[n]] = v1 = fcint_dec$v[,1]
   d1 = fcint_dec$d[1]
